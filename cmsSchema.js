@@ -15,6 +15,7 @@ const schema = gql`
   type Topic {
     id: ID!
     name: String
+    description: String
     posts: [Post]
   }
 
@@ -30,11 +31,21 @@ const schema = gql`
     datePublished: String
   }
 
-  type Query {
+  type Query {  
     posts: [Post]
     topics: [Topic]
     topic(id: ID): Topic
     post(id: ID): Post
+  }
+
+  input CommentInput {
+    text: String
+    author: String
+    datePublished: String
+  }
+
+  type Mutation {
+    createComment(input: CommentInput): Comment
   }
 `;
 
