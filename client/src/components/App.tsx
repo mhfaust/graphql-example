@@ -1,4 +1,3 @@
-// import './App.css';
 import {
   BrowserRouter,
   Routes,
@@ -8,6 +7,7 @@ import {
 import Posts from './Posts';
 import Home from './Home';
 import PostPage from "./PostPage";
+import "./App.css"
 
 function App() {
   return (

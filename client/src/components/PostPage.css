@@ -1,0 +1,6 @@
+.topic-link{
+  padding: 0 .5em;
+}
+.topic-link:not(:last-child) {
+  border-right: 1px solid #ccc;
+}

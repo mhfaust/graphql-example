@@ -1,8 +1,8 @@
 
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { Post } from "./models";
-import { POSTS } from "./queries";
+import { Post } from "../graphql/models";
+import { POSTS } from "../graphql/queries";
 
 const Posts = () => {
 

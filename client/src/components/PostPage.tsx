@@ -1,8 +1,9 @@
 import { useQuery } from "@apollo/client";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { Post, Comment, Topic } from "./models";
-import { POST } from "./queries";
+import { Post, Comment } from "../graphql/models";
+import { POST } from "../graphql/queries";
+import "./PostPage.css"
 
 const PostPage = () => {
 
@@ -11,9 +12,6 @@ const PostPage = () => {
   const { loading, error, data } = useQuery<{ post: Post }>(POST, {
     variables: { postId: id }
   });
-
-  // console.log("id: " + id)
-  // return <div>id: {id}</div>
 
   if(loading){
     return <div>Loading...</div>
@@ -37,7 +35,7 @@ const PostPage = () => {
         allow="autoplay"
         allowFullScreen
       />
-      <p>Topics: {topics?.map(topic => <span>{topic.name}</span>)}</p>
+      <p><b>Topics:</b> {topics?.map(topic => <span className="topic-link">{topic.name}</span>)}</p>
       {comments?.map((comment: Comment) => (
         <Fragment key={comment.id}>
           <p>{comment.text}</p>
