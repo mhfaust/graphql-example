@@ -1,9 +1,9 @@
 module.exports = [
-  { post: "1", topic: "1 "},
-  { post: "2", topic: "1 "},
-  { post: "2", topic: "2 "},
-  { post: "3", topic: "2 "},
-  { post: "4", topic: "2 "},
-  { post: "5", topic: "3 "},
-  { post: "6", topic: "3 "},
+  { postId: "1", topicId: "1"},
+  { postId: "2", topicId: "1"},
+  { postId: "2", topicId: "2"},
+  { postId: "3", topicId: "2"},
+  { postId: "4", topicId: "2"},
+  { postId: "5", topicId: "3"},
+  { postId: "6", topicId: "3"},
 ]

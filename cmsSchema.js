@@ -6,7 +6,7 @@ const schema = gql`
     title: String!
     text: String!
     blurb: String
-    #topics: [Topic!]
+    topics: [Topic!]
     author: String
     datePublished: String
     comments: [Comment!]
@@ -15,7 +15,7 @@ const schema = gql`
   type Topic {
     id: ID!
     name: String
-    #posts: [Post]
+    posts: [Post]
   }
 
   type Comment {

@@ -14,6 +14,11 @@ const resolvers = {
     comments: (parent) => {
       return comments.filter(comment => parent.comments?.includes(comment.id));
     },
+    topics: (parent) => {
+       const linkedTopicIds = topicsPosts
+        .filter(({ postId }) => postId === parent.id).map(link => link.topicId);
+       return topics.filter(topic => linkedTopicIds.includes(topic.id))
+    }
   }
 };
 
