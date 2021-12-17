@@ -2,7 +2,7 @@ const { gql } = require('apollo-server');
 
 const schema = gql`
 
-  "This field holds blog-post info "
+  "This field holds blog-post info"
   type Post implements Byline {
     id: ID!
     title: String!
