@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import Posts from './Posts';
 import Home from './Home';
+import PostPage from "./PostPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <header className="app-header">
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
@@ -22,6 +23,7 @@ function App() {
         </header>
         <Routes>
           <Route path="/posts" element={<Posts/>} />
+          <Route path="/post/:id" element={<PostPage/>} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>

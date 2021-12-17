@@ -7,17 +7,20 @@ module.exports = [
       It’s not just a channel to learn about already accepted physics. 
       It’s exploration. Thought-provoking. Thank you. `,
     author: "Infinities Loop",
+    datePublished: "Dec 4, 2021"
   },
   {
     id: "2",
     text: `
-      Great Post! Thank you. `,
+    Great Post! Thank you. `,
     author: "Fan Boy",
+    datePublished: "Dec 4, 2021"
   },
   {
     id: "3",
     text: `
-      Very thought provoking. Looking forward to more of these.`,
+    Very thought provoking. Looking forward to more of these.`,
     author: "Observer",
+    datePublished: "Dec 4, 2021"
   },
 ];

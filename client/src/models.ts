@@ -1,8 +1,11 @@
+export type DataResult<T> = {
+  data: T;
+}
 
 export type Post = {
   id: string;
   title: string;
-  text: string;
+  url: string;
   blurb: string;
   topics?: Topic[];
   author: string;

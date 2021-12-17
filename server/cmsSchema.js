@@ -4,7 +4,7 @@ const schema = gql`
   type Post implements Byline {
     id: ID!
     title: String!
-    text: String!
+    url: String!
     blurb: String
     topics: [Topic!]
     author: String
