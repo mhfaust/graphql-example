@@ -8,10 +8,9 @@ This will be used to highlight he advantage of graphql over rest
 
 
 use Blog Management System
-- List blog posts with titles and bylines
-- List blob posts biwth blurb title, and byline
-- Infinite-scroll List of full posts
-- List topics with count of blog-posts
+- List blog posts with  title, date, author, and comment count
+- Post page with full post & full comments
+- List all topics with count of blog-posts for each
 - Topic page with blog titles & bylines
 
 

@@ -1,29 +1,13 @@
 const { ApolloServer, gql } = require('apollo-server');
 
-const schema = gql`
-  type Post implements HasByline {
-    id: ID!
-    title: String!
-    text: String!
-    blurb: String
-    topics: [Topic!]
-    author: String
-    datePublished: String
-    comments: [Comment!]
-  }
-  type Topic {
-    id: ID!
-    name: String
-    posts: [Post]
-  }
-  type Comment {
-    id: ID!
-    text: String,
-    author: String
-    datePublished: String
-  }
-  interface Byline {
-    author: String
-    datePublished: String
-  }
-`;
+const typeDefs = require("./cmsSchema");
+const resolvers = require("./cmsResolvers");
+
+// The ApolloServer constructor requires two parameters: your schema
+// definition and your set of resolvers.
+const server = new ApolloServer({ typeDefs, resolvers });
+
+// The `listen` method launches a web server.
+server.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
